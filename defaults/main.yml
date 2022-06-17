@@ -1,0 +1,12 @@
+---
+
+authentik_image:                'ghcr.io/goauthentik/server'
+authentik_tag:                  '2022.3.3'
+
+authentik_port_http:            9000
+authentik_port_https:           9443
+# authentik_postgres_password:
+authentik_postgres_user:       'authentik-admin'
+authentik_postgres_db:         'authentnik'
+
+...

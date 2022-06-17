@@ -1,0 +1,11 @@
+fileignoreconfig:
+allowed_patterns:
+  - >
+    - POSTGRES_PASSWORD=\${.*}
+  - >
+    AUTHENTIK_POSTGRESQL__PASSWORD: +\${.*}
+  - >
+    POSTGRES_PASSWORD: "{{ .* }}"
+  - >
+    AUTHENTIK_POSTGRESQL__PASSWORD: "{{ .* }}"
+
