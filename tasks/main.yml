@@ -58,8 +58,6 @@
             - ./media:/media
             - ./custom-templates:/templates
             - geoip:/geoip
-          env_file:
-            - .env
           ports:
             - "0.0.0.0:{{ authentik_port_http }}:9000"
             - "0.0.0.0:{{ authentik_port_https }}:9443"
@@ -84,17 +82,6 @@
             - /var/run/docker.sock:/var/run/docker.sock
             - ./custom-templates:/templates
             - geoip:/geoip
-          env_file:
-            - .env
-        geoipupdate:
-          image: "maxmindinc/geoipupdate:latest"
-          volumes:
-            - "geoip:/usr/share/GeoIP"
-          environment:
-            GEOIPUPDATE_EDITION_IDS: "GeoLite2-City"
-            GEOIPUPDATE_FREQUENCY: "8"
-          env_file:
-            - .env
       volumes:
         database:
           driver: local
