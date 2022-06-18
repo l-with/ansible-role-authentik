@@ -35,8 +35,6 @@
             POSTGRES_USER:     "{{ authentik_postgres_user }}"
             POSTGRES_PASSWORD: "{{ authentik_postgres_password }}"
             POSTGRES_DB:       "{{ authentik_postgres_db }}"
-          env_file:
-            - .env
         redis:
           image: redis:alpine
           restart: unless-stopped
