@@ -1,15 +1,11 @@
 ---
 
-authentik_image:                'ghcr.io/goauthentik/server'
-authentik_tag:                  '2022.6.2'
-
 authentik_docker_compose_state: present
+authentik_base_directory:       /opt/authentik
+# authentik_pg_pass:
+# authentik_secret_key
 
-authentik_port_http:            9000
-authentik_port_https:           9443
-# authentik_postgres_password:
-authentik_postgres_user:       'authentik-admin'
-authentik_postgres_db:         'authentik'
+authentik_bootstrap: true
 # authentik_bootstrap_password:
 # authentik_bootstrap_token:
 
