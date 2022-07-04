@@ -1,0 +1,22 @@
+fileignoreconfig:
+
+- filename: templates/.env.j2
+  ignore_detectors: [filename]
+
+allowed_patterns:
+  - >
+    - POSTGRES_PASSWORD=\${.*}
+  - >
+    AUTHENTIK_POSTGRESQL__PASSWORD: +\${.*}
+  - >
+    POSTGRES_PASSWORD: "{{ .* }}"
+  - >
+    AUTHENTIK_POSTGRESQL__PASSWORD: "{{ .* }}"
+  - >
+    AUTHENTIK_BOOTSTRAP_PASSWORD: +"{{ \w+ }}"
+  - >
+    \w+={{ \w+ }}
+  - >
+    # GEOIPUPDATE_LICENSE_KEY=.*
+  - >
+    \|.*\|.*\|.*\|.*\|
