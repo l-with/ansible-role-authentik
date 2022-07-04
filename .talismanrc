@@ -18,3 +18,5 @@ allowed_patterns:
     \w+={{ \w+ }}
   - >
     # GEOIPUPDATE_LICENSE_KEY=.*
+  - >
+    \|.*\|.*\|.*\|.*\|
