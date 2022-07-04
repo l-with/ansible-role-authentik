@@ -2,7 +2,6 @@
 
 authentik_image_tag:            2022.6.3
 authentik_error_reporting:      false
-authentik_docker_compose_state: present
 authentik_base_directory:       /opt/authentik
 # authentik_pg_pass:
 # authentik_secret_key
@@ -10,5 +9,13 @@ authentik_base_directory:       /opt/authentik
 authentik_bootstrap: true
 # authentik_bootstrap_password:
 # authentik_bootstrap_token:
+
+# authentik_smtp_host:
+# authentik_smtp_port:
+# authentik_smtp_username:
+# authentik_smtp_password:
+# authentik_smtp_tls:
+# authentik_smtp_ssl:
+# authentik_smtp_from:
 
 ...
