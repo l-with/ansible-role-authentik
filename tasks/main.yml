@@ -45,7 +45,7 @@
     project_src: "{{ authentik_base_directory }}"
     state: present
 
-- name: Ensure mailcow is running with docker compose
+- name: Ensure mailcow is running with docker compose command
   ansible.builtin.command:
     cmd:   "docker compose up --detach"
     chdir: "{{ authentik_base_directory }}"
