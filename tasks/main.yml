@@ -40,11 +40,6 @@
     force: true
     mode: '0770'
 
-- name: Ensure authentik is installed with docker-compose
-  community.docker.docker_compose:
-    project_src: "{{ authentik_base_directory }}"
-    state: present
-
 - name: Ensure mailcow is running with docker compose command
   ansible.builtin.command:
     cmd:   "docker compose up --detach"
