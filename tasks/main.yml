@@ -35,9 +35,10 @@
 
 - name: Ensure authentik docker compose file
   ansible.builtin.get_url:
-    url:  "https://raw.githubusercontent.com/goauthentik/authentik/version/{{ authentik_image_tag }}/docker-compose.yml"
-    dest: "{{ authentik_base_directory }}/docker-compose.yml"
-    mode: '0770'
+    url:   "https://raw.githubusercontent.com/goauthentik/authentik/version/{{ authentik_image_tag }}/docker-compose.yml"
+    dest:  "{{ authentik_base_directory }}/docker-compose.yml"
+    force: true
+    mode:  '0770'
 
 - name: Ensure mailcow is running with docker compose command
   ansible.builtin.command:
